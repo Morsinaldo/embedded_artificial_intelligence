@@ -7,7 +7,7 @@ E-mail: morsinaldo.medeiros.075@ufrn.edu.br
 
 LinkedIn: https://www.linkedin.com/in/morsinaldo-medeiros-288053105/ 
 
-<center><img width="500" src="https://github.com/Morsinaldo/embedded_artificial_intelligence/blob/main/images/Reddi.png"></center>
+<center><img width="800" src="https://github.com/Morsinaldo/embedded_artificial_intelligence/blob/main/images/Reddi.png"></center>
 
 ## English version
 
