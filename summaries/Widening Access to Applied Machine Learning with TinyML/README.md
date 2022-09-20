@@ -21,4 +21,4 @@ Nos últimos anos, a aplicação de Machine Learning nas mais diversas áreas v�
 
 ## Reference:
 
-Reddi, Vilay Janapa et al. Widening Access to Applied Machine Learning with TinyML, 2021. [![Arxiv](https://img.shields.io/badge/paper-arxiv-red)](https://arxiv.org/pdf/2106.04008.pdf)
+Reddi, Vilay Janapa et al. Widening Access to Applied Machine Learning with TinyML, 2021. [![Arxiv](https://img.shields.io/badge/paper-arxiv-red)](https://arxiv.org/pdf/2106.04008)
