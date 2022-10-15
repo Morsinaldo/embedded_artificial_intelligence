@@ -75,11 +75,7 @@ The follow results will be shown:
 
  We may be tempted to claim that this dataset contains the only attributes capable of predicting if there is a cat, dog or a panda in an image. However, this is not the case. The dataset is composed of 3,000 images, which is a small number of images to train a model. The dataset is also composed of images with different resolutions, which may lead to a model that is not robust to different image sizes. Also, the dataset does not contain attributes that could infringe someone's rights or harm in any way.
 
- ## Caveats and Recommendations
-
- It should be noted that the model trained in this project was used only for validation of a complete data pipeline. It is notary that some important issues related to size of images exist, and adequate techniques need to be adopted in order to balance it. Including data augmentation techniques, for example. Other more appropriate models should be used in order to obtain better results such as Convolutional Neural Networks (CNNs).
-
- Given the environmental concerns raised in recent years because of the emission of CO2 into the atmosphere, a library named `codecarbon` was used to measure the amount of energy spent and the amount of CO2 released for the training of a neural network.As neural networks require a large computational cost, mainly GPU, the library was used to measure how much CO2 was released into the atmosphere and how much energy was spent during training and hyperparameter tuning.
+  Given the environmental concerns raised in recent years because of the emission of CO2 into the atmosphere, a library named `codecarbon` was used to measure the amount of energy spent and the amount of CO2 released for the training of a neural network.As neural networks require a large computational cost, mainly GPU, the library was used to measure how much CO2 was released into the atmosphere and how much energy was spent during training and hyperparameter tuning.
 
  #### Running without sweep (one CNN model)
 - Energy consumed: 0.00087 kWh
@@ -89,6 +85,9 @@ The follow results will be shown:
 - Energy consumed: 0.0032231 kWh
 - CO² emission: 0.0007044 kg
 
+ ## Caveats and Recommendations
+
+ It should be noted that the model trained in this project was used only for validation of a complete data pipeline. It is notary that some important issues related to size of images exist, and adequate techniques need to be adopted in order to balance it. Including data augmentation techniques, for example. Other more appropriate models should be used in order to obtain better results such as Convolutional Neural Networks (CNNs).
 
  ## How to run this project
 
@@ -105,14 +104,14 @@ git clone https://github.com/Morsinaldo/embedded_artificial_intelligence.git
 run = wandb.init(entity="your_user_name",project=args["project_name"], job_type="data_segregation")
 ```
 
-5- Run the files inside the folder `knn_classifier` in the following order:
-   - fetch data >> preprocessing >> data_segregation >> train >> test
+5- Run the files inside the folder [knn_classifier](./knn_classifier/) in the following order:
+   - 1 - fetch data >> 2 - preprocessing >> 3 - data_segregation >> 4 - train >> 5 - test
 
-6- Run the files inside the folder `mlp_classifier` in the following order:
-   - preprocessing >> data_segregation >> train >> test
+6- Run the files inside the folder [mlp_classifier](./mlp_classifier/) in the following order:
+   - 2 - preprocessing >> 3 - data_segregation >> 4 - train >> 5 - test
 
-7- Run the files inside the folder `cnn_classifier` in the following order:
-   - preprocessing >> data_segregation >> train >> test
+7- Run the files inside the folder [cnn_classifier](./cnn_classifier/) in the following order:
+   - 2 - preprocessing >> 3 - data_segregation >> 4 - train >> 5 - test
 
 ## References
 - [Ivanovitch's repository for embedded artificial intelligence repository](https://github.com/ivanovitchm/embedded.ai)
