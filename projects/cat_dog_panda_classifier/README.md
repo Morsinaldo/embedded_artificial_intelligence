@@ -114,7 +114,9 @@ run = wandb.init(entity="your_user_name",project=args["project_name"], job_type=
 7- Run the files inside the folder `cnn_classifier` in the following order:
    - preprocessing >> data_segregation >> train >> test
 
-## :books: References
-- Ivanovitch's repository for embedded artificial intelligence repository ([here](https://github.com/ivanovitchm/embedded.ai));
+## References
+- [Ivanovitch's repository for embedded artificial intelligence repository](https://github.com/ivanovitchm/embedded.ai)
+
+- [Codecarbon's Github](https://github.com/mlco2/codecarbon)
 
 
