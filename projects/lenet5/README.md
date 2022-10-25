@@ -45,24 +45,43 @@ The best configuration can be seen in the image below, which has __4__ convoluti
 
 The table below shows the metrics obtained in all 10 different configurations tested. We can see that only one configuration obtained bad results, but the other 9 configurations reached an accuracy over 80%.
 
-Model                         |Accuracy|Precision|Recall|F1-Score
-------------------------------|:--------:|:---------:|:------:|:--------:
-earnest-sweep-9               | 0.9882   | 0.9882    | 0.9882 | 0.9882
-sandy-sweep-3                 | 0.9864   | 0.9864    | 0.9864 | 0.9864 
-faithful-sweep-6              | 0.9761   | 0.9761    | 0.9761 | 0.9761 
-worldly-sweep-7               | 0.961    | 0.9611    | 0.961  | 0.961
-denim-sweep-2                 | 0.9481   | 0.9481    | 0.9481 | 0.948
-vocal-sweep-10                | 0.9374   | 0.9373    | 0.9374 | 0.9373
-usual-sweep-1                 | 0.9119   | 0.9123    | 0.9119 | 0.9119
-wild-sweep-8                  | 0.8667   | 0.867     | 0.8667 | 0.8663
-summer-sweep-4                | 0.8284   | 0.8277    | 0.8284 | 0.8254
-legendary-sweep-5             | 0.4834   | 0.4557    | 0.4834 | 0.433
+Model                           |Accuracy|Precision|Recall|F1-Score
+--------------------------------|:--------:|:---------:|:------:|:--------:
+[earnest-sweep-9](https://wandb.ai/marianabritoazevedo/lenet-5/runs/n8u016u1?workspace=user-marianabritoazevedo)               | 0.9882   | 0.9882    | 0.9882 | 0.9882
+[sandy-sweep-3](https://wandb.ai/marianabritoazevedo/lenet-5/runs/k0a8k2jn?workspace=user-marianabritoazevedo)                 | 0.9864   | 0.9864    | 0.9864 | 0.9864 
+[faithful-sweep-6](https://wandb.ai/marianabritoazevedo/lenet-5/runs/sfyxivd6?workspace=user-marianabritoazevedo)              | 0.9761   | 0.9761    | 0.9761 | 0.9761 
+[worldly-sweep-7](https://wandb.ai/marianabritoazevedo/lenet-5/runs/itia2avr?workspace=user-marianabritoazevedo)               | 0.961    | 0.9611    | 0.961  | 0.961
+[denim-sweep-2](https://wandb.ai/marianabritoazevedo/lenet-5/runs/ezbpah6p?workspace=user-marianabritoazevedo)                 | 0.9481   | 0.9481    | 0.9481 | 0.948
+[vocal-sweep-10](https://wandb.ai/marianabritoazevedo/lenet-5/runs/zt4scujp?workspace=user-marianabritoazevedo)                | 0.9374   | 0.9373    | 0.9374 | 0.9373
+[usual-sweep-1](https://wandb.ai/marianabritoazevedo/lenet-5/runs/kgmvbof1?workspace=user-marianabritoazevedo)                 | 0.9119   | 0.9123    | 0.9119 | 0.9119
+[wild-sweep-8](https://wandb.ai/marianabritoazevedo/lenet-5/runs/rlxibbnd?workspace=user-marianabritoazevedo)                  | 0.8667   | 0.867     | 0.8667 | 0.8663
+[summer-sweep-4](https://wandb.ai/marianabritoazevedo/lenet-5/runs/dzd967ie?workspace=user-marianabritoazevedo)                | 0.8284   | 0.8277    | 0.8284 | 0.8254
+[legendary-sweep-5](https://wandb.ai/marianabritoazevedo/lenet-5/runs/a9husrf9?workspace=user-marianabritoazevedo)             | 0.4834   | 0.4557    | 0.4834 | 0.433
 
 The image below shows the results reached according to the parameters of each sweep.
 
-
-
 ![image info](./images/sweep-lenet.png)
+
+Next, we can observe, respectively, the graph of accuracy and loss, the output of the classification report and the confusion matrix for the best model obtained in the sweep.
+
+<center>
+<img src="./images/loss-accuracy-lenet.png" width="500px"/>
+Graph of loss and accuracy
+</center>
+
+
+<center>
+<img src="./images/classification-report-lenet.png" width="500px"/>
+Classification report
+</center>
+
+<center>
+<img src="./images/confusion-matrix-lenet.png" width="500px"/>
+Confusion matrix
+</center>
+
+As observed in the confusion matrix, the model was more confused predicting the numbers 4 and 7 when it was actually the number 9.
+
 
 ## Model 2: Data Augmentation
 
@@ -128,13 +147,21 @@ The image below shows the results reached according to the parameters of each sw
 
 Next, we can observe, respectively, the graph of accuracy and loss, the output of the classification report and the confusion matrix for the best model obtained in the sweep.
 
-![image info](./images/acc_loss.png)
+<center>
+<img width='500' src='./images/acc_loss.png'>
 Graph of accuracy and loss 
+</center>
 
-![image info](./images/classification_report.png)
+
+<center>
+<img width='500' src='./images/classification_report.png'>
 Classification Report
+</center>
 
-![image info](./images/confusion_matrix.png)
+
+<center>
+<img width='500' src='./images/confusion_matrix.png'>
 Confusion Matrix
+</center>
 
 As observed in the confusion matrix, the model was more confused predicting the number 7 when it was actually the number 2.
