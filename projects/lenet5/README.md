@@ -45,6 +45,8 @@ The best configuration can be seen in the image below, which has __4__ convoluti
 
 The table below shows the metrics obtained in all 10 different configurations tested. We can see that only one configuration obtained bad results, but the other 9 configurations reached an accuracy over 80%.
 
+<p align="center">
+
 Model                           |Accuracy|Precision|Recall|F1-Score
 --------------------------------|:--------:|:---------:|:------:|:--------:
 [earnest-sweep-9](https://wandb.ai/marianabritoazevedo/lenet-5/runs/n8u016u1?workspace=user-marianabritoazevedo)               | 0.9882   | 0.9882    | 0.9882 | 0.9882
@@ -58,27 +60,32 @@ Model                           |Accuracy|Precision|Recall|F1-Score
 [summer-sweep-4](https://wandb.ai/marianabritoazevedo/lenet-5/runs/dzd967ie?workspace=user-marianabritoazevedo)                | 0.8284   | 0.8277    | 0.8284 | 0.8254
 [legendary-sweep-5](https://wandb.ai/marianabritoazevedo/lenet-5/runs/a9husrf9?workspace=user-marianabritoazevedo)             | 0.4834   | 0.4557    | 0.4834 | 0.433
 
+</p>
+
 The image below shows the results reached according to the parameters of each sweep.
 
 ![image info](./images/sweep-lenet.png)
 
 Next, we can observe, respectively, the graph of accuracy and loss, the output of the classification report and the confusion matrix for the best model obtained in the sweep.
 
-<center>
+<p align="center">
 <img src="./images/loss-accuracy-lenet.png" width="500px"/>
-Graph of loss and accuracy
-</center>
+
+<p align="center">Graph of loss and accuracy</p>
+</p>
 
 
-<center>
+<p align="center">
 <img src="./images/classification-report-lenet.png" width="500px"/>
-Classification report
-</center>
 
-<center>
+<p align="center">Classification report</p>
+</p>
+
+<p align="center">
 <img src="./images/confusion-matrix-lenet.png" width="500px"/>
-Confusion matrix
-</center>
+
+<p align="center">Confusion matrix</p>
+</p>
 
 As observed in the confusion matrix, the model was more confused predicting the numbers 4 and 7 when it was actually the number 9.
 
@@ -128,6 +135,7 @@ The best configuration can be seen in the image below, which has __2__ convoluti
 
 The table below shows the metrics obtained in all 10 different configurations tested. We can see that al configurations reached an accuracy over 96 over test dataset%.
 
+<p align="center">
 Model                         |Accuracy|Precision|Recall|F1-Score
 ------------------------------|:--------:|:---------:|:------:|:--------:
 [bright-sweep-9](https://wandb.ai/morsinaldo/lenet-5/runs/pz2p5om2?workspace=user-morsinaldo)                | 0.9931   | 0.9931    | 0.9931 | 0.9931
@@ -141,27 +149,97 @@ Model                         |Accuracy|Precision|Recall|F1-Score
 [leafy-sweep-3](https://wandb.ai/morsinaldo/lenet-5/runs/z8089w2t?workspace=user-morsinaldo)                 | 0.9658   | 0.9661    | 0.9658 | 0.9658
 [earthy-sweep-5](https://wandb.ai/morsinaldo/lenet-5/runs/2dkykiqt?workspace=user-morsinaldo)                | 0.9652   | 0.9661    | 0.9652 | 0.9653
 
+</p>
+
 The image below shows the results reached according to the parameters of each sweep.
 
 ![image info](./images/sweep-data-augumentation.png)
 
 Next, we can observe, respectively, the graph of accuracy and loss, the output of the classification report and the confusion matrix for the best model obtained in the sweep.
 
-<center>
+<p align="center">
 <img width='500' src='./images/acc_loss.png'>
-Graph of accuracy and loss 
-</center>
+
+<p align="center">Graph of accuracy and loss</p>
+</p>
 
 
-<center>
+<p align="center">
 <img width='500' src='./images/classification_report.png'>
-Classification Report
-</center>
+
+<p align="center">Classification Report</p>
+</p>
 
 
-<center>
+<p align="center">
 <img width='500' src='./images/confusion_matrix.png'>
-Confusion Matrix
-</center>
+
+<p align="center">Confusion Matrix</p>
+</p>
 
 As observed in the confusion matrix, the model was more confused predicting the number 7 when it was actually the number 2.
+
+## Model 3: KakashiNet
+
+The purpose of KakashiNet architecture is to explore the use of batch normalization and dropout, using the ReLU activation function.
+
+### :mag: Settings for hyperparameter tuning 
+The configurations of the sweep to make the hyperparameter tuning to the KakashiNet arquitecthure are described below:
+*  `conv_layer`: number of convolutional layers. The possibilities are 1, 2 or 3;
+*  `learn_rate`: the step size at each iteration while moving toward a minimum of a loss function. The possibilities are 0.01, 0.001 or 0.005;
+*  `epoch`: the number of epochs which the CNN will be trained. The possibilities are 5 or 30;
+*  `batch_size`: the size of the batch. The possibilities are 32 or 64;
+*  `dropout`: some neurons are statistically deactivated during training. The possibilities are 0.0, 0.25 or 0.5.
+
+### :trophy: Best configuration
+
+The parameters for the sweep were chosen randomly, and there were tested 10 different types of configuration to the KakashiNet architecture.
+
+The best configuration can be seen in the image below, which has __4__ convolutional layers, we have the pooling layer using __AveragePooling__, __0.001__ as the learning rate, __64__ as the batch size value. Furthermore, all dropout layers were 0.25. In the end, it has a flatten layer followed by three fully connected layers with 120, 84 and 10 neurons, respectively. This configuration achieved an accuracy of 99.47%.
+
+![image info](./images/kakashinet_background.png)
+
+### :chart_with_upwards_trend: Metrics
+
+The table below shows the metrics obtained in all 10 different configurations tested. It can see that all settings showed a good accuracy.
+
+Run                           |Accuracy  |Precision  |Recall  |F1-Score
+------------------------------|:--------:|:---------:|:------:|:--------:
+[jolly-sweep-1](https://wandb.ai/thaisaraujom/kakashinet/runs/h6nucsjq?workspace=user-thaisaraujom)                | 0.9947   | 0.9947   | 0.9947 | 0.9947
+[fresh-sweep-5](https://wandb.ai/thaisaraujom/kakashinet/runs/rsd52k2d?workspace=user-thaisaraujom)                 | 0.9922   | 0.9922   | 0.9922 | 0.9922 
+[smooth-sweep-9](https://wandb.ai/thaisaraujom/kakashinet/runs/h30fj4a9?workspace=user-thaisaraujom)                | 0.9918   | 0.9919    | 0.9918 | 0.9918 
+[fragrant-sweep-10](https://wandb.ai/thaisaraujom/kakashinet/runs/rmnvvvzh?workspace=user-thaisaraujom)                 | 0.9915   | 0.9916   | 0.9915 | 0.9915
+[light-sweep-7](https://wandb.ai/thaisaraujom/kakashinet/runs/rq5wayqb?workspace=user-thaisaraujom)                  | 0.9896   | 0.9896    | 0.9896 | 0.9896
+[smooth-sweep-4](https://wandb.ai/thaisaraujom/kakashinet/runs/5ffl28r1?workspace=user-thaisaraujom)                 | 0.989   | 0.989   | 0.989 | 0.989
+[peach-sweep-3](https://wandb.ai/thaisaraujom/kakashinet/runs/68f2r2p2?workspace=user-thaisaraujom)                 | 0.9884   | 0.9885   | 0.9884 | 0.9884
+[pious-sweep-8](https://wandb.ai/thaisaraujom/kakashinet/runs/h3l9iora?workspace=user-thaisaraujom)                | 0.9852   | 0.9854    | 0.9852 | 0.9852
+[scarlet-sweep-6](https://wandb.ai/thaisaraujom/kakashinet/runs/ihle49ob?workspace=user-thaisaraujom)                 | 0.9845   | 0.9845   | 0.9845 | 0.9845
+[sunny-sweep-2](https://wandb.ai/thaisaraujom/kakashinet/runs/fw435n8r?workspace=user-thaisaraujom)                | 0.9693   | 0.9696   | 0.9693 | 0.9693
+
+The image below shows the results reached according to the parameters of each sweep.
+
+![image info](./images/kakashinet_sweep.png)
+
+Then, we can observe, respectively, the accuracy and loss graph, the output of the classification report and the confusion matrix to the best model obtained in the sweep.
+
+<p align="center" style="text-align:center">
+    <img width='500' src='./images/kakashinet_loss_accuracy.png'>
+    <p align="center">Accuracy and Loss Graph</p>
+</p align="center">
+
+
+<p align="center" style="text-align:center">
+    <img width='500' src='./images/kakashinet_classification_report.png'>
+    <p align="center">Classification Report</p>
+</p align="center">
+
+
+<p align="center" style="text-align:center">
+    <img width='500' src='./images/kakashinet_confusion_matrix.png'>
+    <p align="center">Confusion Matrix</p>
+</p align="center">
+
+As observed in the confusion matrix, the model was more confused predicting the number 9 when it was actually the number 4.
+
+## Reference
+[Ivanovitch's Repository](https://github.com/ivanovitchm/embedded.ai)
