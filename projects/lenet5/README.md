@@ -133,9 +133,9 @@ The best configuration can be seen in the image below, which has __2__ convoluti
 
 ### :chart_with_upwards_trend: Metrics
 
-The table below shows the metrics obtained in all 10 different configurations tested. We can see that al configurations reached an accuracy over 96 over test dataset%.
+The table below shows the metrics obtained in all 10 different configurations tested. We can see that al configurations reached an accuracy over 96% over test dataset.
 
-<p align="center">
+
 Model                         |Accuracy|Precision|Recall|F1-Score
 ------------------------------|:--------:|:---------:|:------:|:--------:
 [bright-sweep-9](https://wandb.ai/morsinaldo/lenet-5/runs/pz2p5om2?workspace=user-morsinaldo)                | 0.9931   | 0.9931    | 0.9931 | 0.9931
@@ -149,7 +149,6 @@ Model                         |Accuracy|Precision|Recall|F1-Score
 [leafy-sweep-3](https://wandb.ai/morsinaldo/lenet-5/runs/z8089w2t?workspace=user-morsinaldo)                 | 0.9658   | 0.9661    | 0.9658 | 0.9658
 [earthy-sweep-5](https://wandb.ai/morsinaldo/lenet-5/runs/2dkykiqt?workspace=user-morsinaldo)                | 0.9652   | 0.9661    | 0.9652 | 0.9653
 
-</p>
 
 The image below shows the results reached according to the parameters of each sweep.
 
