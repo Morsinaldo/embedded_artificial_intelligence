@@ -21,5 +21,7 @@ Source: [Reddi (2021)](https://arxiv.org/pdf/2106.04008.pdf)
 
 - LeNet5 [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](./projects/lenet5)
 
+- Face Mask Detection [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](./projects/face_mask_detection/)
+
 ## :books: Reference 
 - Ivanovitch's repository: [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](https://github.com/ivanovitchm/datastructure)
