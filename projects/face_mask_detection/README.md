@@ -144,7 +144,9 @@ Given the environmental concerns raised in recent years because of the emission 
 
 - [Ivanovitch's repository for embedded artificial intelligence repository](https://github.com/ivanovitchm/embedded.ai)
 
-- [Our Medium Link]()
+- [Our Medium Link](https://medium.com/@thaisaraujom/with-or-without-a-mask-3200bf897c64)
+
+- [Our video on Youtube](https://youtu.be/NT5heiwqeBw)
 
 
 
