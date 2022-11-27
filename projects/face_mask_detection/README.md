@@ -4,18 +4,18 @@
 With the pandemic of COVID19, the use of masks has become of paramount importance for health protection. With this in mind, a model was trained by [Mariana](https://github.com/marianabritoazevedo), [Thaís](https://github.com/thaisaraujo2000) and myself using transfer learning with the VGG, DenseNet and MobileNet models to detect whether a person is wearing a mask or not. This project is part of the discipline Embedded Artificial Intelligence (DCA0306) taught by [Ivanovitch Silva](https://github.com/ivanovitchm) at Federal University of Rio Grande do Norte [(UFRN)](https://ufrn.br). The dataset used for training can be found on the Kaggle website. Finally, we have also put the model on the Edge Impulse platform for the community to test and enjoy.
 
 <p align='center'>
-    <img src="./images/kakashi_draw.png" width=400>
+    <img src="./images/kakashi_draw.png" width=800>
 </p>
 
 The problem solving was divided into two notebooks: one responsible for transforming the dataset into an artifact and storing it in the Weights and Biases [(Wandb)](https://wandb.ai/site) platform, and the other responsible for taking this data, performing the split between training and testing, training the model, and evaluating it. Finally, we have made a model available on the [Edge Impulse](https://www.edgeimpulse.com) platform so you can test our idea and have fun. Edge Impulse is a free Machine Learning platform for developers that aims to ship Machine Learning models on edge devices.
 
-To read more about it, you can check our article on [Medium]() and our pitch on [Loom]()
+To read more about it, you can check our article on [Medium](https://medium.com/@thaisaraujom/with-or-without-a-mask-3200bf897c64) and our pitch on [Youtube](https://youtu.be/NT5heiwqeBw)
 
 
 ## Data segregation
 
 <p align='center'>
-    <img src="./images/train_test_split.png" width=400>
+    <img src="./images/train_test_split.png" width=800>
 </p>
 
 To perform the data segregation, the Keras utils library was used. So, the first step is to use the command below to instantiate an object with the data.
@@ -41,7 +41,7 @@ Once the data is divided, we can move on to the transfer learning part.
 Transfer learning is a technique used in neural networks and consists of reusing a trained model for problem X, which will now be applied to problem Y, so that problems X and Y are similar. There are several ways to apply transfer learning, but only two will be explored for now: feature extractor and fine-tuning.
 
 <p align='center'>
-    <img src="./images/tlf.png" width=250>
+    <img src="./images/tlf.png" width=500>
 </p>
 
 ## Feature extractor
@@ -104,6 +104,8 @@ We used index 4 because of our modelation, but this number can change depending 
 
 ## Results
 
+<div align='center'>
+
  **Architecture**  |  **Stage [Run]**                        | **Accuracy** | **F1** | **Precision** | **Recall** | 
 ----------------|---------------------------------|--------------|--------|---------------|------------|
  VGG16 [feature extractor]    | [clean-shape-3](https://wandb.ai/marianabritoazevedo/face_mask_detection/runs/x8m1f3z4/overview?workspace=user-) | 0.9955      | 0.9955 | 0.9956        | 0.9955    |  
@@ -113,10 +115,12 @@ DenseNet [fine-tuning]     | [cool-pine-3](https://wandb.ai/morsinaldo/face_mask
 MobileNet [feature extractor]   | [comic-spaceship-3](https://wandb.ai/thaisaraujom/face_mask_detection/runs/27l3za7b/overview?workspace=user-)  | 0.9933      | 0.9933 | 0.9933        | 0.9933     |
 MobileNet [fine-tuning]    | [elated-field-4](https://wandb.ai/thaisaraujom/face_mask_detection/runs/2sf3ylkg?workspace=user-)  | 0.9978      | 0.9978 | 0.9978        | 0.9978     | 
 
+</div>
+
 The figure below shows the confusion matrix of the best model in our experiment.
 
 <p align='center'>
-    <img src="./images/confusion_matrix_vgg16.png" width=400>
+    <img src="./images/confusion_matrix_vgg16.png" width=800>
 </p>
 
 This shows us that this technique is very efficient and we get excellent results using a pre-trained model instead of training a network from scratch. Also, we can see that we can achieve good results by using a lightweight model like MobileNet, rather than using a heavy model like DenseNet.
