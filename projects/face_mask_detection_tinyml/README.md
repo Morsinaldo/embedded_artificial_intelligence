@@ -1,3 +1,5 @@
+# With or Without a mask
+
 ## Introduction
 
 Many people have been using machine learning to create very innovative solutions in all areas of science. Some models have up to 99% accuracy, and that's very cool, but in general these models are very heavy, trained for hours or even days on powerful GPUs. The challenge we bring today is: how to run such a model on an embedded device? In general, these devices have limited processing and memory, and should not have high power consumption.
@@ -78,7 +80,7 @@ Finally, the platform already provides an option to convert the template to the 
 
 ### Deploy
 
-Once you have downloaded the model, you use the Arduino IDE to load it into the device. As shown in the diagram below, you first add the `.zip` file of the model as a library and then perform the inference using the BLE 33 camera itself.
+Once you have downloaded the model, you use the Arduino IDE to load it into the device. As shown in the diagram below, you first add the [.zip](./library_zip/) file of the model as a library and then perform the inference using the BLE 33 camera itself.
 
 The step-by-step on how to deploy can be found in more detail in Marcelo Rovai's course [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](https://github.com/Mjrovai/UNIFEI-IESTI01-TinyML-2022.1).
 
