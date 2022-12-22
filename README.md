@@ -23,5 +23,7 @@ Source: [Reddi (2021)](https://arxiv.org/pdf/2106.04008.pdf)
 
 - Face Mask Detection [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](./projects/face_mask_detection/)
 
+- Face Mask Detection using TinyML[![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](./projects/face_mask_detection/)
+
 ## :books: Reference 
 - Ivanovitch's repository: [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](https://github.com/ivanovitchm/datastructure)
