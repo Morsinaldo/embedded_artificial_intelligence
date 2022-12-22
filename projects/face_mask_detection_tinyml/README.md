@@ -4,7 +4,7 @@
 
 Many people have been using machine learning to create very innovative solutions in all areas of science. Some models have up to 99% accuracy, and that's very cool, but in general these models are very heavy, trained for hours or even days on powerful GPUs. The challenge we bring today is: how to run such a model on an embedded device? In general, these devices have limited processing and memory, and should not have high power consumption.
 
-With that in mind, [Mariana Azevedo](https://github.com/marianabritoazevedo) [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](https://github.com/marianabritoazevedo), [Thaís Medeiros](https://github.com/thaisaraujo2000) [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](https://github.com/thaisaraujo2000/algorithms_datastructure_ii/tree/main/week%2013) and I made a small project to embed a model that detects whether or not a person is wearing a mask from a photo into an Arduino Nano 33 BLE Sense provided by [Edge Impulse](https://edgeimpulse.com), which can be seen in the image below.
+With that in mind, [Mariana Azevedo](https://github.com/marianabritoazevedo) [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](https://github.com/marianabritoazevedo/embedded-ai/tree/main/With_Without_Mask), [Thaís Medeiros](https://github.com/thaisaraujo2000) [![Repository](https://img.shields.io/badge/-Repo-191A1B?style=flat-square&logo=github)](https://github.com/thaisaraujo2000/embedded_artificial_intelligence/tree/main/projects/project_2) and I made a small project to embed a model that detects whether or not a person is wearing a mask from a photo into an Arduino Nano 33 BLE Sense provided by [Edge Impulse](https://edgeimpulse.com), which can be seen in the image below.
 
 <p align='center'>
     <img src='./images/kit.png' width=400>
@@ -25,15 +25,15 @@ Overall, our project was divided into three steps: The first steps; Train/Test a
 
 ### First Steps
 
-**The Goal**: The goal of our project is to create a classifier model that, given an image, indicates whether or not a person is wearing a mask.
+**The Goal**: Our project aims to create a classifier model that, given an image, indicates whether or not a person is wearing a mask.
 
-**Collect, clean and pre-process the data**: The dataset can be found in [Kaggle]() and has 7298 images, which were divided into 80% for training (5838 images) and 20% for testing (1460 images). Some examples can be seen below. The choice of theme is due to the context of the Covid-19 pandemic still being experienced today.
+**Collect, clean and pre-process the data**: The dataset can be found on [Kaggle](https://www.kaggle.com/datasets/ashishjangra27/face-mask-12k-images-dataset) and has 12000 images, but only 7298 images were collected. Thus, the data were divided into 80% for training (5838 images) and 20% for testing (1460 images). Some examples can be seen below. The choice of theme is due to the context of the Covid-19 pandemic still being experienced today. 
 
 <p align='center'>
     <img src='./images/data_segregation.png' width=400>
 </p>
 
-**Design a model architecture**: The model was built from Edge Impulse's own platform and it was chosen to use transfer learning from the MobileNetV1 model. The architecture of the model can be seen below:
+**Design a model architecture**: The model was built from Edge Impulse's platform and it was chosen to use transfer learning from the MobileNetV1 model through da EON Tuner tool. The architecture of the model can be seen below:
 
 <p align='center'>
     <img src='./images/model_arch.png' width=300>
@@ -41,31 +41,15 @@ Overall, our project was divided into three steps: The first steps; Train/Test a
 
 ## Train/Test
 
-**Train a model**: The training was performed for 20 epochs and the hyperparameter tuning was done using a tool called EON Tuner, which searches for parameters for the model architecture according to some targets defined by the group. The result of the chosen model and the targe can be seen in the image below.
-
-<style>
-.column{
-  float: left;
-  width: 50%;
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
+**Train a model**: The training was performed for 20 epochs and the hyperparameter tuning was done using a tool called EON Tuner, which searches for parameters for the model architecture according to some targets defined by the group. The result of the chosen model and the target can be seen in the image below.
 
 <p align='center'>
-<div class="row">
-  <div class="column">
-    <img src="./images/final_model.png" style="width:50%">
-  </div>
-  <div class="column">
-    <img src="./images/target.png" style="width:55%">
-  </div>
-  </div>
-</div></div>
+  <img src="./images/final_model.png" width=300>
 </p>
 
+<p align='center'>
+  <img src="./images/target.png"  width=300>  
+</p>
 
 With this, it is possible to observe that all parameters were within the limitations of the device we want to ship the model and a very good acuity was obtained. It is important to point out that it is good practice that the model occupies about 50% of the total available RAM, since it will be necessary to load the image that will be made the inference during the use of the device.
 
@@ -137,7 +121,7 @@ Verify >> Upload
 
 - [Ivanovitch's repository for embedded artificial intelligence repository](https://github.com/ivanovitchm/embedded.ai)
 
-[Kaggle Facemask Dataset]()
+- [Kaggle | Face mask Dataset](https://www.kaggle.com/datasets/ashishjangra27/face-mask-12k-images-dataset)
 
 - [Marcelo Rovai's course](https://github.com/Mjrovai/UNIFEI-IESTI01-TinyML-2022.1)
 
